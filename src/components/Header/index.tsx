@@ -6,7 +6,8 @@ export function Header () {
         <Container>
             <Content>
                 <img src={logoImg} alt="get money" />
-                <button type="button">Nova Transação</button>     
+                <button type="button">Nova Transação</button>
+                <div>Um teste</div>
             </Content>
           
         </Container>
