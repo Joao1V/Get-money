@@ -5,6 +5,7 @@ import { Dashboard } from './components/Dashboard';
 import { Header } from './components/Header';
 import { GlobalStyle } from './styles/global';
 import {NewTransactionModal} from "./components/NewTransactionModal";
+import {TransactionsProvider} from "./hooks/TransactionsContext";
 
 const Title = styled.h1 `
 color: #8257e6;
@@ -22,11 +23,11 @@ export const App = () => {
       setModalTransaction(false)
   }
   return (
-    <>
+    <TransactionsProvider>
       <Header onOpenNewTransactionModal={handleOpen} />
       <Dashboard/>
       <GlobalStyle/>
       <NewTransactionModal isOpen={modalTransaction} onRequestClose={handleClose}/>
-    </>
+    </TransactionsProvider>
   );
 }
